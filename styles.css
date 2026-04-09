@@ -369,6 +369,44 @@ textarea {
   resize: vertical;
 }
 
+/* Container to space the buttons out */
+.modal-footer {
+  display: flex;
+  justify-content: space-between; /* Pushes Delete to left, Save to right */
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee; /* Optional: adds a thin line above buttons */
+}
+
+/* Common styles for both buttons */
+.modal-footer button {
+  padding: 10px 20px;
+  border-radius: 8px; /* Rounded corners */
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+/* Blue Save Button */
+.btn-save {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Red Delete Button */
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Hover effect to show they are clickable */
+.modal-footer button:hover {
+  opacity: 0.9;
+}
+
+
+
 /* ========================
    Responsive Styles
 ======================== */
