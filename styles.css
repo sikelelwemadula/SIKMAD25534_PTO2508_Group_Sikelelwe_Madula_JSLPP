@@ -380,8 +380,8 @@ textarea {
 
 /* Common styles for both buttons */
 .modal-footer button {
-  padding: 10px 20px;
-  border-radius: 8px; /* Rounded corners */
+  padding: 10px 55px;
+  border-radius: 20px; /* Rounded corners */
   border: none;
   font-weight: bold;
   cursor: pointer;
@@ -390,13 +390,13 @@ textarea {
 
 /* Blue Save Button */
 .btn-save {
-  background-color: #007bff;
+  background-color: #635fc7;
   color: white;
 }
 
 /* Red Delete Button */
 .btn-delete {
-  background-color: #dc3545;
+  background-color: #ea5555;
   color: white;
 }
 
@@ -515,4 +515,19 @@ textarea {
     padding-top: 0;
     padding-bottom: 0;
   }
+
+  /* Mobile Styles */
+@media (max-width: 480px) {
+  .modal-footer {
+    flex-direction: column; /* Stacks buttons vertically */
+    gap: 12px;              /* Adds space between the stacked buttons */
+    padding: 15px 0;        /* Removes side padding to let buttons hit the edges */
+  }
+
+  .modal-footer button {
+    width: 100%;            /* Makes buttons fill the full width of the form */
+    padding: 12px;          /* Slightly larger touch area for mobile */
+  }
+}
+
 }
