@@ -5,6 +5,7 @@ import {
   setupNewTaskModalHandler,
   setupTaskModalHandlers,
 } from "./ui/modalHandlers.js";
+import { setupSidebar } from "./ui/sidebarManager.js";
 
 function initTaskBoard() {
   const tasks = loadTasksFromStorage();
@@ -36,6 +37,7 @@ async function fetchAndLoadTasksFromAPI() {
 document.addEventListener("DOMContentLoaded", () => {
   // Try to load from API first, fallback to localStorage
   fetchAndLoadTasksFromAPI();
+  setupSidebar();
   setupModalCloseHandler();
   setupNewTaskModalHandler();
   setupTaskModalHandlers();

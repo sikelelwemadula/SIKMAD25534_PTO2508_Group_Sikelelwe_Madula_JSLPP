@@ -47,16 +47,22 @@ body.dark-mode {
 }
 
 body.dark-mode .side-bar-btn,
-body.dark-mode .theme-toggle-btn,
 body.dark-mode #theme, body.dark-mode #add-new-task-btn {
   background-color: var(--primary-btn-color); /* Consistent button color in dark mode */
   color: #fff; /* Ensure text is visible on dark buttons */
 }
-body.dark-mode .theme-toggle-btn{
-  background-color: var(--primary-btn-color);
+body.dark-mode .theme-toggle-btn {
+  background-color: var(--secondary-color);
+  border-color: #828fa3;
 }
-body.dark-mode .slider{
-  color: var(--secondary-color);
+body.dark-mode .theme-toggle-btn .slider {
+  background-color: #f4f7fd;
+}
+
+body.dark-mode .theme-toggle-div {
+  background-color: var(--primary-btn-color);
+  border-radius: 24px;
+  padding: 12px 16px;
 }
 
 
@@ -87,12 +93,17 @@ body.dark-mode .slider{
   left: 0;
   background-color: var(--primary-btn-color);
   color: var(--primary-color);
-  border: none; 
+  border: none;
   border-radius: 0 100px 100px 0; /* Pill shape only on right side */
   padding: 10px 15px;
   font-size: 1.2rem;
   cursor: pointer;
   z-index: 1001; /* Ensure it stays above the sidebar */
+  display: none;
+}
+
+.side-bar.hidden ~ .show-sidebar-btn {
+  display: block;
 }
 
 .show-sidebar-btn:hover {
@@ -157,7 +168,8 @@ h4 {
   letter-spacing: 0.125rem; /* Makes heading more spaced */
 }
 
-.board-btn {
+.board-btn,
+#hide-sidebar-btn {
   font-family: inherit;
   display: flex;
   align-items: center;
@@ -184,6 +196,33 @@ h4 {
   padding-top: 24px;
 }
 
+.theme-toggle-btn {
+  position: relative;
+  width: 52px;
+  height: 28px;
+  border-radius: 999px;
+  background-color: #f4f7fd;
+  border: 1px solid #828fa3;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.theme-toggle-btn .slider {
+  width: 22px;
+  height: 22px;
+  background-color: #635fc7;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+  margin-left: 3px;
+}
+
+body.dark-mode .theme-toggle-btn .slider {
+  transform: translateX(24px);
+}
+
 /* ===============
    Main Layout
 ================ */
@@ -191,6 +230,12 @@ h4 {
   flex: 1; /* Fills remaining space beside sidebar */
   overflow-x: hidden; /* Prevent horizontal scroll */
   width: 100%;
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+}
+
+#layout.with-sidebar {
+  margin-left: var(--sidebar-width);
 }
 
 /* ===============
