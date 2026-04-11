@@ -69,7 +69,7 @@ body.dark-mode .theme-toggle-div {
 body.dark-mode #hide-sidebar-btn {
   background-color: var(--primary-btn-color);
   color: #fff;
-  border-radius: 12px;
+  border-radius: 0 100px 100px 0;
 }
 
 body.dark-mode #task-modal {
