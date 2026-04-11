@@ -332,6 +332,10 @@ header {
   display: none; /* Hidden on desktop; shown on smaller screens */
 }
 
+.favicon-dark {
+  display: none;
+}
+
 /* ===============
    Board Columns
 ================ */
@@ -675,7 +679,15 @@ textarea {
   }
 
   #header-board-name {
-    font-size: 1rem;
+    display: none;
+  }
+
+  .logo-mobile {
+    display: none !important;
+  }
+
+  .favicon-dark {
+    display: block !important;
   }
 
   .task-div {
@@ -727,8 +739,9 @@ textarea {
     padding-top: 0;
     padding-bottom: 0;
   }
+}
 
-  /* Mobile Styles */
+/* Mobile Styles */
 @media (max-width: 480px) {
   .modal-footer {
     flex-direction: column; /* Stacks buttons vertically */
@@ -740,6 +753,16 @@ textarea {
     width: 100%;            /* Makes buttons fill the full width of the form */
     padding: 12px;          /* Slightly larger touch area for mobile */
   }
-}
 
+  .header-board-name {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: none !important;
+  }
+
+  .favicon-dark {
+    display: block !important;
+  }
 }
