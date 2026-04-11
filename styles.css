@@ -61,8 +61,15 @@ body.dark-mode .theme-toggle-btn .slider {
 
 body.dark-mode .theme-toggle-div {
   background-color: var(--primary-btn-color);
-  border-radius: 24px;
-  padding: 12px 16px;
+  border-radius: 12px;
+  padding: 12px 0;
+  width: 236px;
+}
+
+body.dark-mode #hide-sidebar-btn {
+  background-color: var(--primary-btn-color);
+  color: #fff;
+  border-radius: 12px;
 }
 
 
@@ -168,8 +175,7 @@ h4 {
   letter-spacing: 0.125rem; /* Makes heading more spaced */
 }
 
-.board-btn,
-#hide-sidebar-btn {
+.board-btn {
   font-family: inherit;
   display: flex;
   align-items: center;
@@ -187,19 +193,44 @@ h4 {
   overflow: hidden; /* Prevents overflowed text/icons from showing */
 }
 
+#hide-sidebar-btn {
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+  background-color: #e0e0e0;
+  color: #000;
+  border: none;
+  border-radius: 0 100px 100px 0; /* Pill shape only on right side */
+  height: 48px;
+  width: 276px;
+  padding: 28px 12px 28px 50px;
+  font-size: 0.9375rem;
+  font-weight: bold;
+  cursor: pointer;
+  overflow: hidden; /* Prevents overflowed text/icons from showing */
+}
+
 .theme-toggle-div {
   margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  padding-top: 24px;
+  gap: 12px;
+  padding: 12px 0;
+  margin-bottom: 1rem;
+  align-self: center;
+  width: 236px;
+  background-color: #e0e0e0;
+  border-radius: 12px;
 }
 
+
+/* Updated compact toggle styles */
 .theme-toggle-btn {
   position: relative;
-  width: 52px;
-  height: 28px;
+  width: 40px;          /* Was 52px */
+  height: 20px;         /* Was 28px */
   border-radius: 999px;
   background-color: #f4f7fd;
   border: 1px solid #828fa3;
@@ -211,17 +242,19 @@ h4 {
 }
 
 .theme-toggle-btn .slider {
-  width: 22px;
-  height: 22px;
+  width: 14px;          /* Was 22px */
+  height: 14px;         /* Was 22px */
   background-color: #635fc7;
   border-radius: 50%;
   transition: transform 0.2s ease-in-out;
-  margin-left: 3px;
+  margin-left: 2px;     /* Centering the 14px slider in a 20px height button */
 }
 
+/* Updated sliding distance for the smaller width */
 body.dark-mode .theme-toggle-btn .slider {
-  transform: translateX(24px);
+  transform: translateX(20px); /* Was 24px */
 }
+
 
 /* ===============
    Main Layout
