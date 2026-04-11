@@ -66,6 +66,14 @@ body.dark-mode .theme-toggle-div {
   width: 236px;
 }
 
+body.dark-mode #logo {
+  display: none;
+}
+
+body.dark-mode #logo-dark {
+  display: block;
+}
+
 body.dark-mode #hide-sidebar-btn {
   background-color: var(--primary-btn-color);
   color: #fff;
@@ -172,6 +180,11 @@ body.dark-mode .submit-btn {
 
 #logo {
   width: 100%; /* Make logo responsive within container */
+  display: block;
+}
+
+#logo-dark {
+  display: none;
 }
 
 .boards-nav-links-div {
