@@ -85,6 +85,15 @@ h4 {
   overflow: hidden; /* Prevents overflowed text/icons from showing */
 }
 
+.theme-toggle-div {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 24px;
+}
+
 /* ===============
    Main Layout
 ================ */

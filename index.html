@@ -29,6 +29,31 @@
         <h4 id="headline-sidepanel">ALL BOARDS (1)</h4>
         <button class="board-btn">Launch Career</button>
       </div>
+
+      <!-- Theme Toggle -->
+      <div class="theme-toggle-div">
+        <img src="./assets/icon-light-theme.svg" alt="light-theme-icon" class="theme-icon" />
+        <button id="theme-toggle-btn" class="theme-toggle-btn">
+          <span class="slider"></span>
+        </button>
+        <img src="./assets/icon-dark-theme.svg" alt="dark-theme-icon" class="theme-icon" />
+      </div>
+
+      <!-- Hidden on mobile: Theme toggle and logo are moved to the header for better accessibility. -->
+      <button id="hide-siderbar-btn" class="side-bar-btn">
+        <img src="./assets/icon-hide-sidebar.svg" alt="hide-sidebar-icon" class="hide-icon"/>
+        Hide Sidebar
+      </button>
+      
+      <!-- Overlay for mobile sidebar -->
+      <div id="sidebar-overlay" class="sidebar-overlay"></div> 
+      
+      <!--Show Sidebar-->
+      <button id="show-sidebar-btn" class="side-bar-btn">
+        <img src="./assets/icon-show-sidebar.svg" alt="show-sidebar-icon" class="show-icon"/>
+        Show Sidebar
+      </button>
+
     </nav>
 
     <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
