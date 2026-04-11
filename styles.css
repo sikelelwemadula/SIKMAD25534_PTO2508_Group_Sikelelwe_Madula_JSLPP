@@ -29,6 +29,37 @@ body {
   font-size: 1rem; /* Base font size for rem scaling */
 }
 
+body.dark-mode {
+  --primary-color: #2b2c37;
+  --secondary-color: #20212c;
+  --primary-font-color: #ffffff;
+  --secondary-font-color: #828fa3;
+  --primary-btn-color: #635fc7;
+  --primary-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Darker shadow for dark mode */
+
+/* Dark mode specific styles */ 
+  --loading-bg: #1e3a5f; /* Darker background for loading screen */ 
+  --loading-color: #98caf9; /* Lighter color for loading text */
+  --loading-border: #64b5f6; /* Accent color for loading border */
+  --error-bg: #4a1f29; /* Dark red background for error messages */
+  --error-color: #f48fb1; /* Bright red color for error text */
+  --error-border: #e57373; /* Accent color for error borders */
+}
+
+body.dark-mode .side-bar-btn,
+body.dark-mode .theme-toggle-btn,
+body.dark-mode #theme, body.dark-mode #add-new-task-btn {
+  background-color: var(--primary-btn-color); /* Consistent button color in dark mode */
+  color: #fff; /* Ensure text is visible on dark buttons */
+}
+body.dark-mode .theme-toggle-btn{
+  background-color: var(--primary-btn-color);
+}
+body.dark-mode .slider{
+  color: var(--secondary-color);
+}
+
+
 /* ================
    Sidebar Layout
 ================ */
@@ -39,6 +70,58 @@ body {
   border-right: 1px solid #e4ebfa; /* Light divider */
   width: var(--sidebar-width);
   height: 100vh;
+  transition: all 0.3s ease-in-out; /* Smooth transition for showing/hiding */
+  position: fixed; /* Keep sidebar fixed on the left */
+  left: 0;
+  top: 0;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.side-bar.hidden {
+  transform: translateX(-100%); /* Slide sidebar out of view */
+}
+
+.show-sidebar-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  background-color: var(--primary-btn-color);
+  color: var(--primary-color);
+  border: none; 
+  border-radius: 0 100px 100px 0; /* Pill shape only on right side */
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1001; /* Ensure it stays above the sidebar */
+}
+
+.show-sidebar-btn:hover {
+  background-color: #4a1f29; /* Darker shade on hover */
+}
+
+.close-sidebar-btn {
+  display: none; /* Hidden on desktop; shown on smaller screens */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #ea5555;
+  transition: transform 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+  transition-delay: 0.1s; /* Delay before scaling */
+  padding: 20px;
+}
+
+/* show when sidebar is hidden */ 
+.side-bar.hidden ~ .show-sidebar-btn {
+  display: block;
+}
+
+.sidebar-content {
+  flex: 1; /* Fills available vertical space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #side-logo-div {
@@ -55,6 +138,13 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--primary-font-color);
+  gap: 1rem; /* Space between navigation links */
+}
+
+.boards-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
 }
 
 #headline-sidepanel {
