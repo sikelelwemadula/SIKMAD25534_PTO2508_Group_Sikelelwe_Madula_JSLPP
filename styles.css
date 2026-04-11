@@ -72,6 +72,28 @@ body.dark-mode #hide-sidebar-btn {
   border-radius: 12px;
 }
 
+body.dark-mode #task-modal {
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .modal-header h3 {
+  color: #fff;
+}
+
+body.dark-mode form textarea,
+body.dark-mode form select,
+body.dark-mode form input {
+  background-color: #fff;
+  color: #000;
+  border-color: #828fa3;
+}
+
+body.dark-mode .submit-btn {
+  background-color: var(--primary-btn-color);
+  color: #fff;
+}
+
 
 /* ================
    Sidebar Layout
