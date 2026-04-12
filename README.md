@@ -1,6 +1,8 @@
 # JSL Portfolio Piece: Kanban App Deployment & Features Implementation
 
+# Active links for my JSLPP :
 [Netlify Kanban Link](https://sikelelwe-madula-kanban.netlify.app/)
+[Project Video Presentation](https://www.loom.com/share/1765fffd241746e0a7e498bfa2f09a6f)
 
 ## Overview
 
