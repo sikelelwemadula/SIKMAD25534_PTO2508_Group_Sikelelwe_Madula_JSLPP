@@ -264,7 +264,7 @@ h4 {
   display: flex;
   align-items: center;
   gap: 10px; /* Space between icon and text */
-  background-color: #e0e0e0;
+  background-color: #F4F7FD;
   color: #000;
   border: none;
   border-radius: 0 100px 100px 0; /* Pill shape only on right side */
@@ -287,7 +287,7 @@ h4 {
   margin-bottom: 1rem;
   align-self: center;
   width: 236px;
-  background-color: #e0e0e0;
+  background-color: #F4F7FD;
   border-radius: 12px;
 }
 
@@ -298,7 +298,7 @@ h4 {
   width: 40px;          /* Was 52px */
   height: 20px;         /* Was 28px */
   border-radius: 999px;
-  background-color: #f4f7fd;
+  background-color: #635fc7;
   border: 1px solid #828fa3;
   cursor: pointer;
   padding: 0;
@@ -310,7 +310,7 @@ h4 {
 .theme-toggle-btn .slider {
   width: 14px;          /* Was 22px */
   height: 14px;         /* Was 22px */
-  background-color: #635fc7;
+  background-color: #f4f7fd;
   border-radius: 50%;
   transition: transform 0.2s ease-in-out;
   margin-left: 2px;     /* Centering the 14px slider in a 20px height button */
