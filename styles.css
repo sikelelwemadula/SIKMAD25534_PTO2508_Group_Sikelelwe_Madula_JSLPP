@@ -204,10 +204,35 @@ body.dark-mode .submit-btn {
   padding: 0 12px 0 50px; /* Aligns section content from left and right */
 }
 
+.boards-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 h4 {
   color: var(--secondary-font-color);
   font-size: 0.75rem;
   letter-spacing: 0.125rem; /* Makes heading more spaced */
+}
+
+.sidebar-close-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #ea5555;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 1023px) {
+  .sidebar-close-btn {
+    display: inline-flex;
+  }
 }
 
 .board-btn {
@@ -633,6 +658,10 @@ textarea {
     display: flex !important;
     position: fixed; /* Overlay on top of page */
     height: auto;
+  }
+
+  body.dark-mode .side-bar.show-sidebar {
+    border: 1px solid #3E3F4E;
   }
 
   #side-logo-div {
