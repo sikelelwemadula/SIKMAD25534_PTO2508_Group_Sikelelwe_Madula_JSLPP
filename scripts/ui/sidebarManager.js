@@ -24,9 +24,10 @@ export function setupSidebar() {
         sidebar.classList.remove('show-sidebar');
         layout.classList.remove('with-sidebar');
 
-        // Hide overlay on mobile
-        if (window.innerWidth <= 768 && overlay) {
+        // Hide overlay on mobile/tablet
+        if (window.innerWidth <= 1023 && overlay) {
             overlay.classList.remove('active');
+            body.style.overflow = 'auto';
             if (showBtn) showBtn.style.display = 'block';
         } else if (showBtn) {
             showBtn.style.display = 'block';
@@ -39,9 +40,10 @@ export function setupSidebar() {
         sidebar.classList.remove('hidden');
         if (showBtn) showBtn.style.display = 'none';
 
-        if (window.innerWidth <= 768 && overlay) {
+        if (window.innerWidth <= 1023 && overlay) {
             sidebar.classList.add('show-sidebar');
             overlay.classList.add('active');
+            body.style.overflow = 'hidden';
         } else {
             layout.classList.add('with-sidebar');
         }
@@ -92,8 +94,9 @@ export function setupSidebar() {
     if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
 
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > 1023) {
             if (overlay) overlay.classList.remove('active');
+            body.style.overflow = 'auto';
             if (sidebar.classList.contains('hidden')) {
                 if (showBtn) showBtn.style.display = 'block';
             } else {
@@ -111,5 +114,3 @@ export function setupSidebar() {
         }
     });
 }
-
- 

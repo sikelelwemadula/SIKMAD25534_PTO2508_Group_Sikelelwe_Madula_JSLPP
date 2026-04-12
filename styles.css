@@ -817,28 +817,31 @@ textarea {
   }
 }
 
-/* Sidebar Overlay Styling */
+/* Transparent dark overlay for mobile/tablet sidebar */
 #sidebar-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent grey */
-  z-index: 999; /* Just below the sidebar, but above everything else */
-  transition: opacity 0.3s ease;
-  display: none; /* Hidden by default */
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
 }
 
-/* Class to show the overlay on mobile/tablet */
-#sidebar-overlay.show {
-  display: block;
+#sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
-@media screen and (max-width: 1023px) {
-  /* Optional: Add a blur effect to the background content */
-  #sidebar-overlay.show {
-    backdrop-filter: blur(4px); 
+@media screen and (min-width: 1024px) {
+  #sidebar-overlay {
+    display: none;
   }
 }
+
 
