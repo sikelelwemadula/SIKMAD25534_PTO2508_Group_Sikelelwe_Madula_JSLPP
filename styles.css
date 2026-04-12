@@ -686,6 +686,10 @@ textarea {
     cursor: pointer;
   }
 
+  .show-sidebar-btn {
+    display: none !important;
+  }
+
   .theme-toggle-div {
     margin-top: 10px;
   }
