@@ -66,12 +66,14 @@ body.dark-mode .theme-toggle-div {
   width: 236px;
 }
 
-body.dark-mode #logo {
-  display: none;
-}
+@media screen and (min-width: 1024px) {
+  body.dark-mode #logo {
+    display: none;
+  }
 
-body.dark-mode #logo-dark {
-  display: block;
+  body.dark-mode #logo-dark {
+    display: block;
+  }
 }
 
 body.dark-mode #hide-sidebar-btn {
@@ -184,6 +186,10 @@ body.dark-mode .submit-btn {
 }
 
 #logo-dark {
+  display: none;
+}
+
+.favicon-dark {
   display: none;
 }
 
