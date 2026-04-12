@@ -11,6 +11,7 @@ export function setupSidebar() {
     const showBtn = document.getElementById('show-sidebar-btn');
     const layout = document.getElementById('layout');
     const mobileLogo = document.querySelector('.logo-mobile');
+    const mobileSidebarLogo = document.getElementById('mobile-sidebar-logo');
     const overlay = document.querySelector('#sidebar-overlay');
     const themeToggleBtn = document.getElementById('theme-toggle-btn');
     const body = document.body;
@@ -92,6 +93,7 @@ export function setupSidebar() {
     if (sidebarCloseBtn) sidebarCloseBtn.addEventListener('click', hideSidebar);
     if (showBtn) showBtn.addEventListener('click', showSidebar);
     if (mobileLogo) mobileLogo.addEventListener('click', toggleSidebarMobile);
+    if (mobileSidebarLogo) mobileSidebarLogo.addEventListener('click', toggleSidebarMobile);
     if (overlay) overlay.addEventListener('click', closeSidebarOnOverlayClick);
     if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
 

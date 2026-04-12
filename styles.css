@@ -669,10 +669,23 @@ textarea {
   }
 
   .logo-mobile {
+    display: none;
+  }
+
+  .favicon-dark {
     display: block;
     width: 30px;
-    height: 30px;
-    margin-right: 10px;
+    height: auto;
+    margin-right: 12px;
+    cursor: pointer;
+  }
+
+  .theme-toggle-div {
+    margin-top: 10px;
+  }
+
+  #hide-sidebar-btn {
+    display: none;
   }
 
   body {
@@ -710,6 +723,7 @@ textarea {
   }
 
   #header-board-name {
+    display: none;
     font-size: 1rem;
   }
 
